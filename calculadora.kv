@@ -1,0 +1,103 @@
+<Principal>:
+    orientation: 'vertical'
+    id: Calculadora
+    display: calculadora
+    rows: 6
+    padding: 5
+    spacing: 5
+    TextInput:
+        id: calculadora
+        fonte_size: 10
+        multiline: False
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            id: botao7
+            text: '7'
+            height: 60
+            size_hint: 0.10, 0.50
+            pos_hint: {"top": 1}
+            on_release: root.numero_sete()
+        Button:
+            id: botao8
+            text: '8'
+            size_hint: 0.10, 0.50
+            pos_hint: {"top": 1}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_oito()
+        Button:
+            id: botao9
+            text: '9'
+            pos_hint: {"top": 1}
+            size_hint: 0.10, 0.50
+            pos: 300, 250
+            on_release: root.numero_nove()
+        Button:
+            id: botaox
+            text: 'X'
+            pos_hint: {"top":1}
+            size_hint: 0.10, 0.50
+
+    BoxLayout:
+        Button:
+            id: botao4
+            text: '4'
+            pos_hint: {"top": 1.50}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_quatro()
+        Button:
+            id: botao5
+            text: '5'
+            pos_hint: {"top": 1.50}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_cinco()
+        Button:
+            id: botao6
+            text: '6'
+            pos_hint: {"top": 1.50}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_seis()
+        Button:
+            id: botaoMenos
+            text: '---'
+            pos_hint: {"top": 1.50}
+            size_hint: 0.10, 0.50
+
+    BoxLayout:
+        Button:
+            id: botao1
+            text: '1'
+            pos_hint: {"top": 2}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_um()
+        Button:
+            id:botao2
+            text: '2'
+            pos_hint: {"top": 2}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_dois()
+        Button:
+            id:botao3
+            text: '3'
+            pos_hint: {"top": 2}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_tres()
+        Button:
+            id: botaoSoma
+            text: '+'
+            pos_hint: {"top": 2}
+            size_hint: 0.10, 0.50
+            on_release: root.numeros_soma()
+
+
+
+
+
+
+
+
+
+
+
+
