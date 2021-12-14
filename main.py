@@ -10,12 +10,16 @@ import os
 import numeros
 from numeros import Numeros
 from entidades_numeros import Entidades_Numeros
+from kivy.core.window import Window
+from kivy.lang.builder import Builder
+
+Window.size = (350, 550)
 
 
 class Principal(BoxLayout):
 
     def __init__(self, um, dois, tres, quatro, cinco, seis, sete, oito, nove, **kwargs):
-        super(Principal,  self).__init__(**kwargs)
+        super(Principal, self).__init__(**kwargs)
         self.um = um
         self.dois = dois
         self.tres = tres
@@ -26,10 +30,23 @@ class Principal(BoxLayout):
         self.oito = oito
         self.nove = nove
 
+    def clear(self):
+        self.ids.input_box.text = '0'
+
+    def button_value(self, number):
+        prev_number = self.ids.input_box.text
+
+        if prev_number == '0':
+            self.ids.input_box.text = ''
+            self.ids.input_box.text = f'{number}'
+
+        else:
+            self.ids.input_box.text = f'{prev_number}{number}'
+
     def numero_um(self):
         self.ids.botao1 = self.ids.botao1
         self.um = self.um
-        print(self.um)
+        return self.um
 
     def numero_dois(self):
         self.ids.botao2 = self.ids.botao2

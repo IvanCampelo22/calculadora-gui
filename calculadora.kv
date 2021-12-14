@@ -1,12 +1,11 @@
 <Principal>:
     orientation: 'vertical'
-    id: Calculadora
-    display: calculadora
     rows: 6
     padding: 5
     spacing: 5
     TextInput:
-        id: calculadora
+        id: input_box
+        text: '0'
         fonte_size: 10
         multiline: False
 
@@ -51,16 +50,16 @@
             text: '5'
             pos_hint: {"top": 1.50}
             size_hint: 0.10, 0.50
-            on_release: root.numero_cinco()
+            on_release: calculadora.text = self.text
         Button:
             id: botao6
             text: '6'
             pos_hint: {"top": 1.50}
             size_hint: 0.10, 0.50
-            on_release: root.numero_seis()
+            on_release: calculadora.text = self.text
         Button:
             id: botaoMenos
-            text: '---'
+            text: '-'
             pos_hint: {"top": 1.50}
             size_hint: 0.10, 0.50
 
@@ -70,25 +69,26 @@
             text: '1'
             pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: root.numero_um()
+            on_press: calculadora.text += self.text
+
         Button:
             id:botao2
             text: '2'
             pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: root.numero_dois()
+            on_release: calculadora.text += self.text
         Button:
             id:botao3
             text: '3'
             pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: root.numero_tres()
+            on_release: root.button_value(3)
         Button:
             id: botaoSoma
             text: '+'
             pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: root.numeros_soma()
+            on_release: calculadora.text += self.text
 
 
 
