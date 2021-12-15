@@ -4,7 +4,9 @@
     <list default="true" id="137afce8-1f2b-413d-80fc-247ee0d0ee9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculadora.kv" beforeDir="false" afterPath="$PROJECT_DIR$/calculadora.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades_numeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/entidades_numeros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numeros.py" beforeDir="false" afterPath="$PROJECT_DIR$/numeros.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21Fe16XIckNJHrrznwSw6QR5lSm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -136,6 +141,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

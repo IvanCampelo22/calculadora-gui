@@ -2,12 +2,44 @@
     orientation: 'vertical'
     rows: 6
     padding: 5
-    spacing: 5
+    spacing: 3
     TextInput:
-        id: input_box
+        id: calculadora
         text: '0'
-        fonte_size: 10
+        size_hint_y: 1
         multiline: False
+        fonte_size: 10000
+        height: 100
+
+    BoxLayout:
+        Button:
+            id: botaolimpar
+            text: 'C'
+            height: 60
+            size_hint: 0.10, 0.50
+            pos_hint: {"top": 1}
+            on_release: root.clear()
+        Button:
+            color: (20,30, 40)
+            id: botaoporcentagem
+            text: '%'
+            height: 60
+            size_hint: 0.10, 0.50
+            pos_hint: {"top": 1}
+            on_release: root.sinais("%")
+        Button:
+            id: botaodivisao
+            text: '/'
+            height: 60
+            pos_hint: {'top': 1}
+            size_hint: 0.10, 0.50
+            on_release: root.sinais("/")
+        Button:
+            id: apagarultimo
+            text: '<<'
+            pos_hint: {'top': 1}
+            size_hint: 0.10, 0.50
+            on_release: root.remover_ultimo()
 
     BoxLayout:
         orientation: 'horizontal'
@@ -16,79 +48,106 @@
             text: '7'
             height: 60
             size_hint: 0.10, 0.50
-            pos_hint: {"top": 1}
-            on_release: root.numero_sete()
+            pos_hint: {"top": 1.50}
+            on_release: root.numero_sete(7)
         Button:
             id: botao8
             text: '8'
+            size_hint: 0.30, 0.70
+            pos_hint: {"top": 1.50}
             size_hint: 0.10, 0.50
-            pos_hint: {"top": 1}
-            size_hint: 0.10, 0.50
-            on_release: root.numero_oito()
+            on_release: root.numero_oito(8)
         Button:
             id: botao9
             text: '9'
-            pos_hint: {"top": 1}
+            pos_hint: {"top": 1.50}
             size_hint: 0.10, 0.50
             pos: 300, 250
-            on_release: root.numero_nove()
+            on_release: root.numero_nove(9)
         Button:
             id: botaox
             text: 'X'
-            pos_hint: {"top":1}
+            pos_hint: {"top":1.50}
             size_hint: 0.10, 0.50
+            on_release: root.sinais('x')
 
     BoxLayout:
         Button:
             id: botao4
             text: '4'
-            pos_hint: {"top": 1.50}
+            pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: root.numero_quatro()
+            on_release: root.numero_quatro(4)
         Button:
             id: botao5
             text: '5'
-            pos_hint: {"top": 1.50}
+            pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: calculadora.text = self.text
+            on_release: root.numero_cinco(5)
         Button:
             id: botao6
             text: '6'
-            pos_hint: {"top": 1.50}
+            pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
-            on_release: calculadora.text = self.text
+            on_release: root.numero_seis(6)
         Button:
             id: botaoMenos
             text: '-'
-            pos_hint: {"top": 1.50}
+            pos_hint: {"top": 2}
             size_hint: 0.10, 0.50
+            on_release: root.sinais('-')
 
     BoxLayout:
         Button:
             id: botao1
             text: '1'
-            pos_hint: {"top": 2}
+            pos_hint: {"top": 2.50}
             size_hint: 0.10, 0.50
-            on_press: calculadora.text += self.text
-
+            on_release: root.numero_um(1)
         Button:
             id:botao2
             text: '2'
-            pos_hint: {"top": 2}
+            pos_hint: {"top": 2.50}
             size_hint: 0.10, 0.50
-            on_release: calculadora.text += self.text
+            on_release: root.numero_dois(2)
         Button:
             id:botao3
             text: '3'
-            pos_hint: {"top": 2}
+            pos_hint: {"top": 2.50}
             size_hint: 0.10, 0.50
-            on_release: root.button_value(3)
+            on_release: root.numero_tres(3)
         Button:
             id: botaoSoma
             text: '+'
-            pos_hint: {"top": 2}
+            pos_hint: {"top": 2.50}
             size_hint: 0.10, 0.50
-            on_release: calculadora.text += self.text
+            on_release: root.sinais("+")
+
+    BoxLayout:
+        Button:
+            id: botaoponto
+            text: '.'
+            size_hint: 0.10, 0.50
+            pos_hint: {'top': 3}
+            on_release: root.ponto()
+        Button:
+            id: botao0
+            text: '0'
+            pos_hint: {"top": 3}
+            size_hint: 0.10, 0.50
+            on_release: root.numero_zero(0)
+        Button:
+            id: botaovirgula
+            text: ','
+            size_hint: 0.10, 0.50
+            pos_hint: {'top': 3}
+            on_release: root.sinais(',')
+        Button:
+            id: botaoponto
+            text: '='
+            size_hint: 0.10, 0.50
+            pos_hint: {'top': 3}
+            on_release: root.resultado()
 
 
 

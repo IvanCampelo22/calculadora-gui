@@ -1,5 +1,5 @@
 class Entidades_Numeros():
-    def __init__(self, um, dois, tres, quatro, cinco, seis, sete, oito, nove):
+    def __init__(self, um, dois, tres, quatro, cinco, seis, sete, oito, nove, zero):
         self.__um = um
         self.__dois = dois
         self.__tres = tres
@@ -9,6 +9,7 @@ class Entidades_Numeros():
         self.__seis = seis
         self.__oito = oito
         self.__nove = nove
+        self.__zero = zero
 
     @property
     def um(self):
@@ -81,6 +82,14 @@ class Entidades_Numeros():
     @nove.setter
     def nove(self, nove):
         self.__nove = nove
+
+    @property
+    def zero(self):
+        return self.__zero
+
+    @zero.setter
+    def zero(self, zero):
+        self.__zero = zero
 
 
 

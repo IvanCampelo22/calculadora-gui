@@ -13,6 +13,7 @@ class Numeros():
         self.dois = Entidades_Numeros.dois
         self.tres = Entidades_Numeros.tres
         self.um = Entidades_Numeros.um
+        self.zero = Entidades_Numeros.zero
 
         self.lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
         self.lista_um = self.lista_um

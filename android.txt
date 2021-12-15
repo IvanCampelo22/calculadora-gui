@@ -1,0 +1,3 @@
+title= Meu App
+author=ivan
+orientation:portrait
